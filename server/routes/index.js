@@ -21,7 +21,9 @@ router.get('/list/:id',(req, res, next) => {
   res.send(filteredMemo[0]);
 })
 
-let count = 3;
+let count = memos.length;
+
+
 /* post (/write) form내용 등록*/ 
 router.post('/write',(req, res, next) => {
   const item = req.body;
@@ -35,5 +37,18 @@ router.post('/write',(req, res, next) => {
   memos.push(memo);
   res.redirect('/');
 })
+
+
+/*작성자 검색 화면API
+get('/search/:writer')*/
+router.get('/:writer',(req, res, next) => {
+  const writer = req.params.writer
+  console.log(writer);
+  const filteredMemo = memos.filter(memo => writer == memo.writer)
+  console.log(filteredMemo)
+  res.send(filteredMemo);
+})
+
+
 
 module.exports = router;

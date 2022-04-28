@@ -2,7 +2,7 @@
     <div class="memolist">
         <h1>Memo</h1>
         <table>
-            <tr>
+            <tr class="subject">
                 <td>No.</td>
                 <td>Title</td>
                 <td>Writer</td>
@@ -31,3 +31,24 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+table {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 0px;
+}
+.subject {
+    font-weight: bold;
+}
+
+.subject > td {
+    padding: 8px;
+    background-color: rgb(235, 233, 233);
+}
+
+td {
+    padding: 5px;
+}
+</style>
