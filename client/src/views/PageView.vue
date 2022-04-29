@@ -9,6 +9,7 @@
                 <p><span>Name : </span>{{memo.writer}}</p>
             </div>
             <p>{{memo.memo}}</p>
+            
         </div>
         </div>
         
@@ -27,6 +28,7 @@ export default {
             .then((res) => {
             this.memo = res.data;})
     }
+    
 }
 </script>
 

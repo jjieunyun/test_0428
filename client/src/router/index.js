@@ -33,6 +33,13 @@ const routes = [
     component: function () {
       return import( '../views/SearchView.vue')
     }
+  },
+  {
+    path: '/update/:id',
+    name: 'updateview',
+    component: function () {
+      return import( '../views/UpdateView.vue')
+    }
   }
   
 ]
