@@ -10,7 +10,7 @@
             <textarea name="memo" id="" cols="50" rows="10" 
                 v-model="memo.memo"></textarea>
             <br>
-            <input class="submit" type="submit" value="Modify">
+            <input class="submit" type="submit" value="Submit">
         </form>
     </div>
 </template>
